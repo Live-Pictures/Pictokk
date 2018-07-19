@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <title></title>
+
+  <link rel="manifest" href="manifest.json">
+
+  <!-- un-comment this code to enable service worker
+      <script>
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('service-worker.js')
+            .then(() => console.log('service worker installed'))
+            .catch(err => console.log('Error', err));
+        }
+      </script>-->
+
+  <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+  <link href="lib/ng-dialog/css/ngDialog.css" rel="stylesheet">
+  <link href="lib/ng-dialog/css/ngDialog-theme-default.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+      <link href="css/ionic.app.css" rel="stylesheet">
+      -->
+
+  <!-- ionic/angularjs js -->
+  <script src="lib/ionic/js/ionic.bundle.js"></script>
+  <script src="lib/ngCordova/dist/ng-cordova.js"></script>
+  <script src="lib/signature_pad/signature_pad.js"></script>
+  <script src="lib/ng-dialog/js/ngDialog.js"></script>
+  <script src="lib/angular-sanitize/angular-sanitize.js"></script>
+  <script src="lib/angular-touch/angular-touch.js"></script>
+  <script src="lib/ionic-segment/dist/ionic.segment.js"></script>
+  <!-- cordova script (this will be a 404 during development) -->
+  <script src="cordova.js"></script>
+
+  <!-- your app's js -->
+  <script src="js/globaldef.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/util.js"></script>
+  <script src="js/main.js"></script>
+</head>
+
+<body ng-app="longi_main" class="platform-android platform-cordova platform-webview">
+<ion-nav-view></ion-nav-view>
+<!-- Show /Hide processing status -->
+<div id="spinner" class="spinner" style="visibility: hidden;">
+  <ion-spinner icon="ios"></ion-spinner>
+</div>
+<!-- Top Menu -->
+<div id="top_menu" class="top_menu bar-stable bar bar-header" ng-show="viewDepth < 3">
+  <div class="row">
+    <div class="col col-50 col-center text-left">
+      <span class="top-buttons"><img ng-src="./img/m_icon.png" /></span>
+    </div>
+  </div>
+</div>
+<!-- Bottom Menu 1 -->
+<div class="row menubox camera_btm" ng-show="viewDepth == 1">
+  <div class="col col-50 col-center text-center" ng-click="getCamera();">
+				<span id="takepicture" class="btmlink">
+					<img ng-src="./img/picon1.png"class="pictokk_icon" />사진 촬영
+				</span>
+  </div>
+  <div class="col col-50 col-center text-center" ng-click="getAlbum();">
+				<span id="albumselect" class="btmlink">
+					<img ng-src="./img/picon2.png" class="pictokk_icon" />앨범에서 선택
+				</span>
+  </div>
+</div>
+<div class="menubox textmic_btm" ng-show="viewDepth == 2">
+  <div class="rightmenu" ng-click="getCamera();">
+    <img ng-src="./img/picon1.png" class="pictokk_icon" />사진촬영
+  </div>
+  <div class="rightmenu" ng-click="getAlbum();">
+    <img ng-src="./img/picon2.png" class="pictokk_icon" />앨범에서 선택
+  </div>
+  <div class="rightmenu" ng-click="editText();">
+    <img ng-src="./img/picon3.png" class="pictokk_icon" />글자입력
+  </div>
+  <div class="rightmenu" ng-click="speechToStart();">
+    <img ng-src="./img/picon4.png" class="pictokk_icon" />마이크 입력
+  </div>
+</div>
+</body>
+</html>

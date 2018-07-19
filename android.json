@@ -1,0 +1,323 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "res/xml/config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"Camera\"><param name=\"android-package\" value=\"org.apache.cordova.camera.CameraLauncher\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"KakaoTalk\"><param name=\"android-package\" value=\"com.ghyeok.plugin.kakao.KakaoTalk\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<access origin=\"https://*.kakao.com\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<access origin=\"https://*.kakao.co.kr\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<access origin=\"https://*.kakaocdn.net\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"SpeechRecognition\"><param name=\"android-package\" value=\"com.pbakondy.SpeechRecognition\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"SplashScreen\"><param name=\"android-package\" value=\"org.apache.cordova.splashscreen.SplashScreen\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"StatusBar\"><param name=\"android-package\" value=\"org.apache.cordova.statusbar.StatusBar\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Keyboard\"><param name=\"android-package\" value=\"io.ionic.keyboard.IonicKeyboard\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"CDVOrientation\"><param name=\"android-package\" value=\"cordova.plugins.screenorientation.CDVOrientation\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Canvas2ImagePlugin\"><param name=\"android-package\" value=\"org.devgeeks.Canvas2ImagePlugin.Canvas2ImagePlugin\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"SocialSharing\"><param name=\"android-package\" value=\"nl.xservices.plugins.SocialSharing\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"SQLitePlugin\"><param name=\"android-package\" value=\"io.sqlc.SQLitePlugin\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "AndroidManifest.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
+                            "count": 3
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.RECORD_AUDIO\" />",
+                            "count": 1
+                        }
+                    ],
+                    "application": [
+                        {
+                            "xml": "<provider android:authorities=\"${applicationId}.provider\" android:exported=\"false\" android:grantUriPermissions=\"true\" android:name=\"android.support.v4.content.FileProvider\"><meta-data android:name=\"android.support.FILE_PROVIDER_PATHS\" android:resource=\"@xml/provider_paths\" /></provider>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<meta-data android:name=\"com.kakao.sdk.AppKey\" android:value=\"@string/kakao_app_key\" />",
+                            "count": 1
+                        }
+                    ],
+                    "/manifest": [
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
+                            "count": 1
+                        }
+                    ],
+                    "application/activity": [
+                        {
+                            "xml": "<intent-filter><action android:name=\"android.intent.action.VIEW\" /><category android:name=\"android.intent.category.DEFAULT\" /><category android:name=\"android.intent.category.BROWSABLE\" /><data android:host=\"@string/kakaolink_host\" android:scheme=\"@string/kakao_scheme\" /></intent-filter>",
+                            "count": 1
+                        }
+                    ],
+                    "/manifest/application": [
+                        {
+                            "xml": "<provider android:authorities=\"${applicationId}.sharing.provider\" android:exported=\"false\" android:grantUriPermissions=\"true\" android:name=\"nl.xservices.plugins.FileProvider\"><meta-data android:name=\"android.support.FILE_PROVIDER_PATHS\" android:resource=\"@xml/sharing_paths\" /></provider>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "res/values/kakao_strings.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<string name=\"kakao_app_key\">afc39df5df6751317d75805e1a71edc</string>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<string name=\"kakao_scheme\">kakaoafc39df5df6751317d75805e1a71edc</string>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<string name=\"kakaolink_host\">kakaolink</string>",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.pictokk.pic"
+        },
+        "cordova-plugin-camera-with-exif": {
+            "PACKAGE_NAME": "com.pictokk.pic"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.pictokk.pic"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.pictokk.pic"
+        },
+        "cordova-plugin-ghyeok-kakaotalk": {
+            "KAKAO_APP_KEY": "afc39df5df6751317d75805e1a71edc",
+            "PACKAGE_NAME": "com.pictokk.pic"
+        },
+        "cordova-plugin-speechrecognition": {
+            "PACKAGE_NAME": "com.pictokk.pic"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.pictokk.pic"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.pictokk.pic"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.pictokk.pic"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "com.pictokk.pic"
+        },
+        "es6-promise-plugin": {
+            "PACKAGE_NAME": "com.pictokk.pic"
+        },
+        "cordova-plugin-screen-orientation": {
+            "PACKAGE_NAME": "com.pictokk.pic"
+        },
+        "cordova-plugin-canvas2image": {
+            "PACKAGE_NAME": "com.pictokk.pic"
+        },
+        "cordova-plugin-x-socialsharing": {
+            "PACKAGE_NAME": "com.pictokk.pic"
+        },
+        "cordova-sqlite-storage": {
+            "PACKAGE_NAME": "com.pictokk.pic"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [
+        {
+            "id": "cordova-plugin-camera-with-exif.Camera",
+            "file": "plugins/cordova-plugin-camera-with-exif/www/CameraConstants.js",
+            "pluginId": "cordova-plugin-camera-with-exif",
+            "clobbers": [
+                "Camera"
+            ]
+        },
+        {
+            "id": "cordova-plugin-camera-with-exif.CameraPopoverOptions",
+            "file": "plugins/cordova-plugin-camera-with-exif/www/CameraPopoverOptions.js",
+            "pluginId": "cordova-plugin-camera-with-exif",
+            "clobbers": [
+                "CameraPopoverOptions"
+            ]
+        },
+        {
+            "id": "cordova-plugin-camera-with-exif.camera",
+            "file": "plugins/cordova-plugin-camera-with-exif/www/Camera.js",
+            "pluginId": "cordova-plugin-camera-with-exif",
+            "clobbers": [
+                "navigator.camera"
+            ]
+        },
+        {
+            "id": "cordova-plugin-camera-with-exif.CameraPopoverHandle",
+            "file": "plugins/cordova-plugin-camera-with-exif/www/CameraPopoverHandle.js",
+            "pluginId": "cordova-plugin-camera-with-exif",
+            "clobbers": [
+                "CameraPopoverHandle"
+            ]
+        },
+        {
+            "id": "cordova-plugin-device.device",
+            "file": "plugins/cordova-plugin-device/www/device.js",
+            "pluginId": "cordova-plugin-device",
+            "clobbers": [
+                "device"
+            ]
+        },
+        {
+            "id": "cordova-plugin-ghyeok-kakaotalk.KakaoTalk",
+            "file": "plugins/cordova-plugin-ghyeok-kakaotalk/www/KakaoTalk.js",
+            "pluginId": "cordova-plugin-ghyeok-kakaotalk",
+            "clobbers": [
+                "KakaoTalk"
+            ]
+        },
+        {
+            "id": "cordova-plugin-speechrecognition.SpeechRecognition",
+            "file": "plugins/cordova-plugin-speechrecognition/www/speechRecognition.js",
+            "pluginId": "cordova-plugin-speechrecognition",
+            "merges": [
+                "window.plugins.speechRecognition"
+            ]
+        },
+        {
+            "id": "cordova-plugin-splashscreen.SplashScreen",
+            "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
+            "pluginId": "cordova-plugin-splashscreen",
+            "clobbers": [
+                "navigator.splashscreen"
+            ]
+        },
+        {
+            "id": "cordova-plugin-statusbar.statusbar",
+            "file": "plugins/cordova-plugin-statusbar/www/statusbar.js",
+            "pluginId": "cordova-plugin-statusbar",
+            "clobbers": [
+                "window.StatusBar"
+            ]
+        },
+        {
+            "id": "ionic-plugin-keyboard.keyboard",
+            "file": "plugins/ionic-plugin-keyboard/www/android/keyboard.js",
+            "pluginId": "ionic-plugin-keyboard",
+            "clobbers": [
+                "cordova.plugins.Keyboard"
+            ],
+            "runs": true
+        },
+        {
+            "id": "es6-promise-plugin.Promise",
+            "file": "plugins/es6-promise-plugin/www/promise.js",
+            "pluginId": "es6-promise-plugin",
+            "runs": true
+        },
+        {
+            "id": "cordova-plugin-screen-orientation.screenorientation",
+            "file": "plugins/cordova-plugin-screen-orientation/www/screenorientation.js",
+            "pluginId": "cordova-plugin-screen-orientation",
+            "clobbers": [
+                "cordova.plugins.screenorientation"
+            ]
+        },
+        {
+            "id": "cordova-plugin-canvas2image.Canvas2ImagePlugin",
+            "file": "plugins/cordova-plugin-canvas2image/www/Canvas2ImagePlugin.js",
+            "pluginId": "cordova-plugin-canvas2image",
+            "clobbers": [
+                "window.canvas2ImagePlugin"
+            ]
+        },
+        {
+            "id": "cordova-plugin-x-socialsharing.SocialSharing",
+            "file": "plugins/cordova-plugin-x-socialsharing/www/SocialSharing.js",
+            "pluginId": "cordova-plugin-x-socialsharing",
+            "clobbers": [
+                "window.plugins.socialsharing"
+            ]
+        },
+        {
+            "id": "cordova-sqlite-storage.SQLitePlugin",
+            "file": "plugins/cordova-sqlite-storage/www/SQLitePlugin.js",
+            "pluginId": "cordova-sqlite-storage",
+            "clobbers": [
+                "SQLitePlugin"
+            ]
+        }
+    ],
+    "plugin_metadata": {
+        "cordova-plugin-compat": "1.2.0",
+        "cordova-plugin-camera-with-exif": "1.2.2",
+        "cordova-plugin-console": "1.1.0",
+        "cordova-plugin-device": "1.1.4",
+        "cordova-plugin-ghyeok-kakaotalk": "1.0.0",
+        "cordova-plugin-speechrecognition": "1.1.2",
+        "cordova-plugin-splashscreen": "4.0.3",
+        "cordova-plugin-statusbar": "2.2.1",
+        "cordova-plugin-whitelist": "1.3.1",
+        "ionic-plugin-keyboard": "2.2.1",
+        "es6-promise-plugin": "4.2.2",
+        "cordova-plugin-screen-orientation": "3.0.1",
+        "cordova-plugin-canvas2image": "0.7.0",
+        "cordova-plugin-x-socialsharing": "5.3.2",
+        "cordova-sqlite-storage": "2.3.1"
+    }
+}

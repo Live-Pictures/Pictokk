@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link rel="manifest" href="manifest.json">
+
+    <!-- un-comment this code to enable service worker
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(() => console.log('service worker installed'))
+          .catch(err => console.log('Error', err));
+      }
+    </script>-->
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+	<script src="lib/ngCordova/dist/ng-cordova.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+     <!-- your app's js -->
+    <script src="js/globaldef.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/util.js"></script>
+    <script src="js/sha256.js"></script>
+    <script src="js/start.js"></script>
+    <style>
+	.scroll{ position:relative; height:100%; }
+	.item-input{padding:0; border-radius:4px;}
+	.checkbox-icon:before{border-radius:0 !important; border-color:#aeaeae !important; border-width:1px !important; }
+	.item-checkbox .checkbox{left:70px; right:70px;}
+	.item-checkbox{padding-left:120px;}
+  </style>
+</head>
+<body ng-app="longi_start" class="platform-android platform-cordova platform-webview">
+<ion-pane>
+    <ion-content ng-controller="LoginCtrl">
+		<div id="snslogin" class="row rowpadding0 height100 bgImgCover">
+			<div class="col col-100 col-center text-center">
+				<div class="snslogintit1">SNS LOGIN</div>
+				<div class="snslogintit2">PHOTO EDIT</div>
+				<div>
+					<img ng-src="./img/sns1.png" class="snslink" ng-click="doLogin('kakaotalk');"/>
+					<img ng-src="./img/sns2.png" class="snslink" ng-click="doLogin('naver');"/>
+					<img ng-src="./img/sns3.png" class="snslink" ng-click="doLogin('facebook');"/>
+					<img ng-src="./img/sns4.png" class="snslink" ng-click="doLogin('instagram');"/>
+				</div>
+			</div>
+		</div>
+
+        <!-- Show /Hide processing status -->
+        <div id="spinner" class="spinner" style="visibility: hidden;">
+            <ion-spinner icon="ios"></ion-spinner>
+        </div>
+    </ion-content>
+</ion-pane>
+</body>
+</html>

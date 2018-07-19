@@ -1,0 +1,49 @@
+<!-- 사진촬영 -->
+<ion-view hide-nav-bar="true" hide-back-button="true" view-title="">
+  <ion-content padding="false" scroll="false">
+    <div id="camera" class="row rowpadding0 height100">
+      <div id="creatImg" class="col col-100 col-center text-center" style="padding:0;">
+        <img id="viewPicture" ng-src="./img/camera.png" ng-style="{'max-width':(pictureShow == 'Y'?'100%':'100px')}" />
+      </div>
+      <div id="selectBox" class="selectBox row" ng-show="resultText.length > 1 && !editText">
+        <div class="col col-100 col-center">
+          <ion-checkbox  ng-repeat="temp in resultText" ng-click="selectText($index)">{{ temp.name }}</ion-checkbox>
+        </div>
+      </div>
+      <!--<div id="editTextBox" on-touch="onTouch($event)" on-tap="onTap($event)" on-double-tap="onDoubleTap($event)" on-drag="onDrag($event)" on-release="onRelease($event)" ng-style="draggedStyle" ng-show="editText">-->
+      <div id="editTextBg" ng-click="onTouchOut()" ng-disabled="dragOn == 0" ng-show="editText"></div>
+      <div id="editTextBox" on-touch="onTouch($event)" on-release="onRelease($event)" on-double-tap="onDoubleTap($event)" ng-style="draggedStyle">
+        <span ng-show="!textEditor"><pre id="textEditorView">{{ editText }}</pre></span>
+        <textarea id="textEditorArea" rows="1" ng-model="editText" ng-show="textEditor"></textarea>
+        <!--<input type="text" ng-model="editText">-->
+      </div>
+    </div>
+  </ion-content>
+
+
+  <div id="editorBox" ng-show="viewDepth == 3">
+    <div class="row" style="padding:0; border-bottom:1px solid #fff;">
+      <div class="col col-25 col-center text-center editorMenu" ng-click="choiceProcess(1);">
+        폰트
+      </div>
+      <div class="col col-25 col-center text-center editorMenu" ng-click="choiceProcess(2);">
+        크기
+      </div>
+      <div class="col col-25 col-center text-center editorMenu" ng-click="choiceProcess(3);">
+        색상
+      </div>
+      <div class="col col-25 col-center text-center editorMenu" ng-click="saveProcess();" style="color:#a68ce9; font-weight: 700;">
+        저장
+      </div>
+    </div>
+    <div class="row" style="padding:5px 1px 2px 1px">
+      <ion-scroll direction="x" zooming="false" style="width:100%;" class="colorRow">
+        <div class="col col-100 col-center text-center" ng-show="editProcess == 0" style="color:#fff; font-size:18px;">텍스트 편집</div>
+        <div class="col col-33 col-center fontBox" ng-show="editProcess == 1" ng-repeat="font in fontArray" style="font-family:{{ font }}" ng-click="changeFont('font', $index);">대한민국</div>
+        <div class="col col-25 col-center sizeBox" ng-show="editProcess == 2" ng-repeat="size in sizeArray" ng-click="changeFont('size', $index);">{{ size }}</div>
+        <div class="col col-10 col-bottom colorBox" ng-show="editProcess == 3" ng-repeat="color in colorArray" style="background-color:#{{ color }}" ng-click="changeFont('color', $index);"></div>
+      </ion-scroll>
+    </div>
+  </div>
+</ion-view>
+

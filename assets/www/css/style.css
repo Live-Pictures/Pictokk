@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css?family=Black+And+White+Picture|Black+Han+Sans|Cute+Font|Do+Hyeon|Dokdo|East+Sea+Dokdo|Gaegu|Gamja+Flower|Gothic+A1|Gugi|Hi+Melody|Jua|Kirang+Haerang|Nanum+Brush+Script|Nanum+Gothic|Nanum+Gothic+Coding|Nanum+Myeongjo|Nanum+Pen+Script|Poor+Story|Song+Myung|Stylish|Sunflower:300|Yeon+Sung');
+@font-face {
+    font-family: 'Noto Sans Korean';
+    font-style: normal;
+    font-weight: 100;
+    src: local('Noto Sans Thin'), local('NotoSans-Thin'),
+    url(../fonts/eot/NotoSansKR-Thin-Hestia.eot),
+    url(../fonts/eot/NotoSansKR-Thin-Hestia.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/woff/NotoSansKR-Thin-Hestia.woff) format('woff'),
+    url(../fonts/otf/NotoSansKR-Thin-Hestia.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans Korean';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Noto Sans Light'), local('NotoSans-Light'),
+    url(../fonts/eot/NotoSansKR-Light-Hestia.eot),
+    url(../fonts/eot/NotoSansKR-Light-Hestia.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/woff/NotoSansKR-Light-Hestia.woff) format('woff'),
+    url(../fonts/otf/NotoSansKR-Light-Hestia.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans Korean';
+    font-style: normal;
+    font-weight: 350;
+    src: local('Noto Sans DemiLight'), local('NotoSans-DemiLight'),
+    url(../fonts/eot/NotoSansKR-DemiLight-Hestia.eot),
+    url(../fonts/eot/NotoSansKR-DemiLight-Hestia.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/woff/NotoSansKR-DemiLight-Hestia.woff) format('woff'),
+    url(../fonts/otf/NotoSansKR-DemiLight-Hestia.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans Korean';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Noto Sans Regular'), local('NotoSans-Regular'),
+    url(../fonts/eot/NotoSansKR-Regular-Hestia.eot),
+    url(../fonts/eot/NotoSansKR-Regular-Hestia.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/woff/NotoSansKR-Regular-Hestia.woff) format('woff'),
+    url(../fonts/otf/NotoSansKR-Regular-Hestia.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans Korean';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Noto Sans Medium'), local('NotoSans-Medium'),
+    url(../fonts/eot/NotoSansKR-Medium-Hestia.eot),
+    url(../fonts/eot/NotoSansKR-Medium-Hestia.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/woff/NotoSansKR-Medium-Hestia.woff) format('woff'),
+    url(../fonts/otf/NotoSansKR-Medium-Hestia.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans Korean';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Noto Sans Bold'), local('NotoSans-Bold'),
+    url(../fonts/eot/NotoSansKR-Bold-Hestia.eot),
+    url(../fonts/eot/NotoSansKR-Bold-Hestia.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/woff/NotoSansKR-Bold-Hestia.woff) format('woff'),
+    url(../fonts/otf/NotoSansKR-Bold-Hestia.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans Korean';
+    font-style: normal;
+    font-weight: 900;
+    src: local('Noto Sans Black'), local('NotoSans-Black'),
+    url(../fonts/eot/NotoSansKR-Black-Hestia.eot),
+    url(../fonts/eot/NotoSansKR-Black-Hestia.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/woff/NotoSansKR-Black-Hestia.woff) format('woff'),
+    url(../fonts/otf/NotoSansKR-Black-Hestia.otf) format('opentype');
+}
+
+.noto-text{font-family: 'Noto Sans Korean';}
+
+.tabs{height:53px;}
+.tabs-top > .tabs, .tabs.tabs-top {border-bottom:none;}
+
+
+.bar.bar-stable{background: transparent;}
+
+.pane[hide-nav-bar="true"] .has-tabs-top{top:54px;}
+
+.tab-item{max-width:100%; font-family: 'Noto Sans Korean'; color:#fff; background-color:#2a2730;  opacity:1; font-size:17px; font-weight: 400; border-left:1px solid #6e6c72;}
+.tab-item:first-child{border-left:none;}
+.tab-item.tab-item-active, .tab-item.active, .tab-item.activated {background-color:#4a474f;}
+
+
+.tabs .tab-item .icon.logo {
+  background-repeat: no-repeat;
+  background-position:50% 8px;
+  height:53px;
+  background-image: url('../img/header_logo.png');
+  background-size:34px 37px;
+}
+
+.tab-item.disabled, .tab-item[disabled] { opacity:1; }
+
+.button{font-family: 'Noto Sans Korean'; font-size:18px; font-weight: 400;}
+
+.ip-input{margin-right:10px !important; border:1px solid #d2d2d2 !important; background-color:#d5dbe2 !important;}
+.ip-input84{max-width:84px;}
+.ip-input366{max-width:366px;}
+
+
+/***************** Page CSS *****************/
+#top_menu{ position:absolute; top:0; right:0; left:0; z-index: 10; }
+.top-buttons{display:inline-block; padding:2px; vertical-align: middle;}
+.top-buttons img{vertical-align: middle;}
+
+html {font-family: 'Noto Sans Korean';}
+.row.rowpadding0 {padding: 0px;}
+.height100 {height: 100%;}
+.bgImgCover {background-size: 100% 100%; background-position: center center;}
+
+#intro {background-image: url('../img/intro.jpg');}
+#snslogin {background-image: url('../img/snslogin.jpg');}
+#camera {position:relative; background-color: #ce3a87;}
+#gallery {overflow-y: scroll;}
+
+#camera .selectBox{position:absolute; left:0; top:0; right:0; bottom:0; border:1px solid #000;}
+#camera .selectBox .item{background-color:rgba(0, 0, 0, 0.7); border-color:rgba(255, 255, 255, 0.1);color:#fff;}
+#camera .selectBox .item span{ white-space:normal;}
+
+#editTextBg{position:absolute; left:0; right:0; top:0; bottom:0; z-index:98;}
+#editTextBox{max-width:100%; padding:10px; position:absolute; transform:translate(0px, 400px); -webkit-transform:translate(0px, 400px); z-index:99; border:1px solid rgba(255, 255, 255, 0);}
+#editTextBox span pre{color:#fff; font-size:18px; line-height:130%;}
+#editTextBox textarea{display:block; overflow:hidden; width:100%; background-color: transparent; color:#fff; font-size:18px; line-height:24px; }
+
+#editorBox{position:fixed; bottom:0%; width:100%; z-index:999; background-color:rgba(0,0,0,0.5);}
+.editorMenu{padding:10px 0;  color:#fff; font-size:18px;}
+.colorBox{margin:0 1px; max-width:48px; height:69px;}
+.fontBox{font-size:15px; color:#fff; text-align:center;}
+.sizeBox{font-size:15px; color:#fff; text-align:center;}
+.colorRow div.scroll{ height:72px; display:-webkit-box; display:-webkit-flex; display: -moz-box; display: -moz-flex; display: -ms-flexbox; display: flex; padding: 0; width: 100%; }
+
+
+.snslink {text-decoration: none; margin: 0px 4px;}
+.snslogintit1 {font-size: 22px; text-shadow: 2px 2px 2px #000000; color: #ffffff; letter-spacing: 4px;margin-bottom: 13px;}
+.snslogintit2 {font-size: 12px; color: #15ca00; letter-spacing: 1px;margin-bottom: 55px;}
+.pictokk_icon {margin-bottom: -5px; margin-right: 10px; height: 20px; width: auto;}
+
+.btmlink {color: #000000; text-decoration: none;}
+.menubox .rightmenu {padding: 10px 0px;}
+
+.menubox {font-size: 16px; color: #000000; font-weight: 700;}
+	.camera_btm {position: fixed; bottom: 0%;  z-index: 999; width: 100%; background-color: rgba(255, 255, 255, 1); height: 56px;}
+	.textmic_btm {position: fixed; bottom: 5%; right: 3%; z-index: 999; background-color: rgba(255, 255, 255, 0.8); padding: 12px;}
+	.gallery_topmenu {padding: 20px 25px; height: 58px;}
+
+.menubox select {border: 0px;}
+
+.cameratit1 {font-size: 24px; letter-spacing: 1px; margin-top: 25px; color :#ffffff;}
+#photo_take {text-decoration: none;}
+
+/* Thumbnail Gallery */
+.thumbnail_wrap {overflow-y: scroll;  height: calc(100% - 58px);}
+.thumbnail_container {position: relative; width: 33.333333333333333333333%;	padding-bottom: 33.333333333333333333333%; float:left; background-color: #e9e8ea*;}
+.thumbnail {position:absolute; width:100%; height:100%;}
+.thumbnail img {position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto; max-height:100%; max-width:100%;}
+
+canvas, #creatCanvas{position:fixed; top:0px; left:0; width:360px; height:640px; display:block; background-color:#fff; z-index:999; overflow:hidden;}
+
+#originImag img{max-width:360px; width:360px;}
+
